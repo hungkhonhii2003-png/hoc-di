@@ -1,0 +1,85 @@
+body {
+  /* toàn bộ trang web */
+
+  text-align: center;
+  /* căn giữa chữ */
+
+  background: linear-gradient(135deg, #e2dbdb, #fad0c4);
+
+  /* nền đẹp hơn (chuyển màu nhẹ) */
+
+  font-family: Arial, sans-serif;
+  /* kiểu chữ */
+
+  margin: 0;
+  /* bỏ viền thừa của trình duyệt */
+
+  padding: 20px;
+  /* tạo khoảng cách trong */
+}
+
+h1 {
+  /* tiêu đề lớn */
+
+  color: red;
+  /* màu chữ */
+
+  font-style: italic;
+  /* chữ nghiêng */
+
+  font-size: 36px;
+  /* chữ to */
+
+  text-shadow: 2px 2px 4px #0c0303;
+  /* bóng chữ (đã sửa đúng chuẩn) */
+}
+
+.anhfb img {
+  /* ảnh icon facebook */
+
+  width: 25px;
+  /* nhỏ vừa đẹp hơn 15px */
+
+  vertical-align: middle;
+  /* căn giữa với chữ */
+
+  margin-right: 5px;
+  /* cách chữ */
+
+  border-radius: 50%;
+  /* bo tròn icon */
+}
+.tenvo {
+  /* tên nền */
+
+  font-size: 17px;
+  /* chữ to hơn */
+
+  color: #e9fa02;
+  /* màu xanh facebook */
+
+  font-weight: bold;
+  /* chữ đậm */
+  text-shadow: #200d0dcb 1px 1px 2px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.maqr {
+  /* mã QR */
+
+  width: 250px;
+  /* nhỏ vừa đẹp hơn */
+
+  margin-top: 20px;
+  /* cách trên */
+
+  border: 2px solid #000;
+  /* viền đen cho mã QR */
+}
+.dammaqr {
+  /* khung mã QR */
+  color: rgb(247, 2, 2);
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: #000 1px 1px 2px;
+  font-size: 18px;
+}
