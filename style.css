@@ -1,171 +1,37 @@
 body {
-  /* toàn bộ trang web */
-
-  text-align: center;
-  /* căn giữa chữ */
-
-  background: linear-gradient(135deg, #e2dbdb, #fad0c4);
-
-  /* nền đẹp hơn (chuyển màu nhẹ) */
-
   font-family: Arial, sans-serif;
-  /* kiểu chữ */
-
+  text-align: center;
+  background: #fff3f3;
   margin: 0;
-  /* bỏ viền thừa của trình duyệt */
-
-  padding: 20px;
-  /* tạo khoảng cách trong */
+  padding: 0;
 }
 
+/* ===== TIÊU ĐỀ ===== */
 h1 {
-  /* tiêu đề lớn */
-
-  color: red;
-  /* màu chữ */
-
-  font-style: italic;
-  /* chữ nghiêng */
-
-  font-size: 36px;
-  /* chữ to */
-
-  text-shadow: 2px 2px 4px #0c0303;
-  /* bóng chữ (đã sửa đúng chuẩn) */
-}
-
-.anhfb img {
-  /* ảnh icon facebook */
-
-  width: 25px;
-  /* nhỏ vừa đẹp hơn 15px */
-
-  vertical-align: middle;
-  /* căn giữa với chữ */
-
-  margin-right: 5px;
-  /* cách chữ */
-
-  border-radius: 50%;
-  /* bo tròn icon */
-}
-.tenvo {
-  /* tên nền */
-
-  font-size: 17px;
-  /* chữ to hơn */
-
-  color: #e9fa02;
-  /* màu xanh facebook */
-
-  font-weight: bold;
-  /* chữ đậm */
-  text-shadow: #200d0dcb 1px 1px 2px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-.maqr {
-  /* mã QR */
-
-  width: 250px;
-  /* nhỏ vừa đẹp hơn */
-
   margin-top: 20px;
-  /* cách trên */
-
-  border: 2px solid #000;
-  /* viền đen cho mã QR */
-}
-.dammaqr {
-  /* khung mã QR */
-  color: rgb(247, 2, 2);
-  font-style: italic;
-  font-weight: bold;
   text-shadow: #000 1px 1px 2px;
+}
+
+h4 {
   font-size: 18px;
-}
-.score {
-  /* điểm số */
-
-  font-size: 20px;
-  /* chữ to hơn */
-
-  color: #f70404;
-  /* màu chữ tối hơn */
-
-  margin-top: 20px;
-  /* cách trên */
-  font-style: italic;
   text-shadow: #000 1px 1px 2px;
 }
-<style > .game {
+
+/* ===== GAME ===== */
+.game {
   text-align: center;
   margin-top: 40px;
   padding: 20px;
 }
 
-.hands {
-  font-size: 90px;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
-.shake {
-  animation: shake 0.5s infinite;
-}
-
-@keyframes shake {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  25% {
-    transform: rotate(10deg) scale(1.1);
-  }
-  50% {
-    transform: rotate(0deg) scale(1);
-  }
-  75% {
-    transform: rotate(-10deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-}
-
-.buttons button {
-  padding: 14px 22px;
-  margin: 10px;
-  font-size: 20px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  background: linear-gradient(45deg, #ff4d4d, #ff1a75);
-  color: white;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.buttons button:hover {
-  transform: scale(1.15);
-}
-
-.result {
-  margin-top: 20px;
-  font-size: 22px;
-  font-weight: bold;
-  min-height: 60px;
-}
-
-.score {
-  margin: 15px 0;
-  font-size: 22px;
-}
+/* ===== BATTLE ===== */
 .battle {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  font-size: 90px;
-  margin: 30px 0;
+  font-size: 80px;
+  margin-bottom: 20px;
 }
 
 .vs {
@@ -183,10 +49,67 @@ h1 {
   margin-top: 5px;
 }
 
-.player-hand {
-  transform: rotate(-10deg);
+/* ===== SCORE ===== */
+.score {
+  font-size: 20px;
+  color: #f70404;
+  margin-top: 20px;
+  font-style: italic;
+  text-shadow: #000 1px 1px 2px;
 }
 
-.ai-hand {
-  transform: rotate(10deg);
+/* ===== BUTTON ===== */
+.buttons button {
+  padding: 14px 22px;
+  margin: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff4d4d, #ff1a75);
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== RESULT ===== */
+.result {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+/* ===== FACEBOOK ===== */
+.anhfb {
+  margin-top: 30px;
+}
+
+.fb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #4267b2;
+}
+
+/* icon nhỏ bằng đúng chữ */
+.fb img {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+/* ===== ẢNH QR ===== */
+.maqr {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.score {
+  display: none;
 }

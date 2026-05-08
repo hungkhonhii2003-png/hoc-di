@@ -1,5 +1,5 @@
-let playerScore = 0; // Bạn
-let aiScore = 0; // Hùng Khôn Hii
+let aiScore = 0;
+let playerScore = 0;
 
 const icons = {
   keo: "✌",
@@ -9,20 +9,26 @@ const icons = {
 
 function play(playerChoice) {
   const resultBox = document.getElementById("result");
-
-  resultBox.innerHTML = "🎲 Hùng Khôn Hii đang chọn...";
+  const aiHand = document.getElementById("aiHand");
+  const playerHand = document.getElementById("playerHand");
 
   const choices = ["keo", "bua", "bao"];
+  const aiChoice = choices[Math.floor(Math.random() * 3)];
+
+  // hiện tay người chơi ngay
+  playerHand.innerHTML = icons[playerChoice];
+
+  // hiển thị trạng thái suy nghĩ
+  aiHand.innerHTML = "🤔";
+  resultBox.innerHTML = "🧑 Hùng Khôn Hii đang suy nghĩ...";
 
   setTimeout(() => {
-    const aiChoice = choices[Math.floor(Math.random() * 3)];
-
-    document.getElementById("playerHand").innerHTML = icons[playerChoice];
-    document.getElementById("aiHand").innerHTML = icons[aiChoice];
+    // hiện tay AI sau khi "suy nghĩ"
+    aiHand.innerHTML = icons[aiChoice];
 
     let result = "";
 
-    // 🧑 Hùng Khôn Hii thắng
+    // AI thắng
     if (
       (aiChoice === "keo" && playerChoice === "bao") ||
       (aiChoice === "bua" && playerChoice === "keo") ||
@@ -41,13 +47,10 @@ function play(playerChoice) {
       result = "🧍 Bạn thắng!";
     }
 
-    document.getElementById("player").innerText = playerScore;
-    document.getElementById("computer").innerText = aiScore;
-
     resultBox.innerHTML = `
-      🧍 Bạn chọn: ${playerChoice} <br>
-      🧑 Hùng Khôn Hii chọn: ${aiChoice} <br><br>
+      🧑 Hùng Khôn Hii chọn: ${aiChoice} <br>
+      🧍 Bạn chọn: ${playerChoice} <br><br>
       ${result}
     `;
-  }, 800);
+  }, 900);
 }
