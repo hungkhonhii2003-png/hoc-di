@@ -8,11 +8,13 @@ body {
 
 /* ===== TIÊU ĐỀ ===== */
 h1 {
+  color: #f70404;
   margin-top: 20px;
-  text-shadow: #000 1px 1px 2px;
+  text-shadow: #080808 1px 1px 2px;
 }
 
 h4 {
+  color: #b6f704;
   font-size: 18px;
   text-shadow: #000 1px 1px 2px;
 }
